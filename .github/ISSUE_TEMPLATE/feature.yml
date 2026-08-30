@@ -1,0 +1,114 @@
+name: Feature
+description: Zgłoś funkcjonalność gotową do realizacji przez człowieka lub agenta AI
+title: ""
+labels: []
+type: Feature
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Opisz funkcjonalność tak, aby mogła zostać zrealizowana bez dodatkowego kontekstu.
+        W szczególności określ oczekiwany rezultat, zakres, kryteria akceptacji i sposób weryfikacji.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Cel
+      description: Jaki rezultat ma zostać osiągnięty?
+      placeholder: Opisz oczekiwany rezultat funkcjonalności.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Kontekst
+      description: Dlaczego ta funkcjonalność jest potrzebna i jakie informacje są istotne dla jej realizacji?
+      placeholder: Opisz kontekst biznesowy, produktowy lub techniczny.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Zakres zmian
+      description: Jakich obszarów systemu powinna dotyczyć funkcjonalność?
+      placeholder: |
+        - Obszar 1
+        - Obszar 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Wymagania
+      description: Jakie wymagania musi spełnić implementacja?
+      placeholder: |
+        - Wymaganie 1
+        - Wymaganie 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Kryteria akceptacji
+      description: Po czym jednoznacznie stwierdzimy, że funkcjonalność została wdrożona poprawnie?
+      placeholder: |
+        - [ ] Kryterium 1
+        - [ ] Kryterium 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Ograniczenia i zasady
+      description: Jakich ograniczeń architektonicznych, technicznych lub produktowych należy przestrzegać?
+      placeholder: |
+        - nie zmieniaj publicznego API
+        - wykorzystaj istniejące komponenty
+        - nie dodawaj nowych zależności bez potrzeby
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Poza zakresem
+      description: Czego nie należy zmieniać ani implementować w ramach tego Issue?
+      placeholder: |
+        - Element 1
+        - Element 2
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Weryfikacja
+      description: Jak należy sprawdzić poprawność wdrożenia?
+      placeholder: |
+        - testy
+        - lint
+        - typecheck
+        - ręczna weryfikacja
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Materiały pomocnicze
+      description: Powiązane Issue, PR, dokumentacja, mockupy lub inne materiały.
+      placeholder: |
+        - #123
+        - link do dokumentacji
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Gotowość
+      options:
+        - label: Issue zawiera wystarczający kontekst do samodzielnej realizacji.
+          required: true
+        - label: Kryteria akceptacji są jednoznaczne i możliwe do zweryfikowania.
+          required: true

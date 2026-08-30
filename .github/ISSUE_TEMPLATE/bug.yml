@@ -1,9 +1,9 @@
 name: Błąd
 description: Zgłoś błąd lub nieprawidłowe działanie
 title: ""
+type: bug
 labels:
   - bug
-assignees: []
 
 body:
   - type: markdown
