@@ -1,0 +1,65 @@
+name: Błąd
+description: Zgłoś błąd lub nieprawidłowe działanie
+title: ""
+labels:
+  - bug
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Podaj informacje pozwalające możliwie jednoznacznie odtworzyć i zweryfikować problem.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Opis błędu
+      description: Co działa nieprawidłowo?
+      placeholder: Opisz problem i jego wpływ.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Kroki do odtworzenia
+      description: Jak odtworzyć problem?
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Oczekiwane zachowanie
+      description: Jak system powinien zachować się poprawnie?
+      placeholder: Opisz oczekiwany rezultat.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Rzeczywiste zachowanie
+      description: Co dzieje się obecnie?
+      placeholder: Opisz aktualny rezultat.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Dodatkowy kontekst
+      description: Dodaj logi, zrzuty ekranu, środowisko lub inne informacje pomocne w diagnozie.
+      placeholder: Dodatkowe informacje.
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Weryfikacja poprawki
+      description: Jak należy potwierdzić, że błąd został naprawiony?
+      placeholder: Opisz test lub scenariusz weryfikacyjny.
