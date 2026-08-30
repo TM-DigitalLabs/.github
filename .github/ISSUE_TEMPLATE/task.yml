@@ -1,6 +1,5 @@
 name: Zadanie techniczne
 description: Zgłoś zadanie techniczne, porządkowe lub utrzymaniowe
-title: ""
 labels:
   - chore
 type: Task

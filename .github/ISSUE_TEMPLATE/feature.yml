@@ -1,8 +1,7 @@
-name: Feature
+name: Nowa funkcjonalność lub zmiana istniejącej
 description: Zgłoś funkcjonalność gotową do realizacji przez człowieka lub agenta AI
-title: ""
 labels: []
-type: Feature
+type: feature
 
 body:
   - type: markdown

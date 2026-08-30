@@ -1,6 +1,5 @@
-name: Błąd
+name: BUG
 description: Zgłoś błąd lub nieprawidłowe działanie
-title: ""
 type: bug
 labels:
   - bug
