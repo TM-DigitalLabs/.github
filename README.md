@@ -1,0 +1,2 @@
+# .github
+Szablony dla organizacji 
