@@ -1,21 +1,23 @@
-name: Zadanie
-description: Zgłoś zadanie, nową funkcjonalność lub ulepszenie
+name: Zadanie techniczne
+description: Zgłoś zadanie techniczne, porządkowe lub utrzymaniowe
 title: ""
-labels: []
-assignees: []
+labels:
+  - chore
+type: Task
 
 body:
   - type: markdown
     attributes:
       value: |
-        Opisz zadanie możliwie konkretnie. Szablon ma ułatwić realizację zarówno człowiekowi, jak i agentowi AI.
+        Użyj tego formularza dla prac technicznych, utrzymaniowych i porządkowych,
+        które nie wprowadzają nowej funkcjonalności produktu.
 
   - type: textarea
     id: goal
     attributes:
       label: Cel
-      description: Co powinno zostać osiągnięte?
-      placeholder: Opisz oczekiwany rezultat.
+      description: Co powinno zostać wykonane?
+      placeholder: Opisz oczekiwany rezultat zadania.
     validations:
       required: true
 
@@ -23,8 +25,19 @@ body:
     id: context
     attributes:
       label: Kontekst
-      description: Dlaczego to zadanie jest potrzebne? Dodaj informacje istotne dla jego realizacji.
-      placeholder: Opisz kontekst biznesowy, produktowy lub techniczny.
+      description: Dlaczego zadanie jest potrzebne?
+      placeholder: Opisz przyczynę, problem techniczny lub kontekst utrzymaniowy.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Zakres
+      description: Jakich obszarów powinno dotyczyć zadanie?
+      placeholder: |
+        - Obszar 1
+        - Obszar 2
     validations:
       required: true
 
@@ -32,7 +45,7 @@ body:
     id: requirements
     attributes:
       label: Wymagania
-      description: Wymień wymagania, które powinny zostać spełnione.
+      description: Jakie wymagania powinny zostać spełnione?
       placeholder: |
         - Wymaganie 1
         - Wymaganie 2
@@ -51,11 +64,14 @@ body:
       required: true
 
   - type: textarea
-    id: out_of_scope
+    id: constraints
     attributes:
-      label: Poza zakresem
-      description: Co świadomie nie należy do tego zadania?
-      placeholder: Wymień elementy, których nie należy implementować lub zmieniać.
+      label: Ograniczenia i zasady
+      description: Czy istnieją ograniczenia techniczne lub obszary, których nie należy zmieniać?
+      placeholder: |
+        - nie zmieniaj zachowania funkcjonalnego
+        - zachowaj kompatybilność
+        - nie dodawaj nowych zależności
 
   - type: textarea
     id: verification
@@ -66,4 +82,26 @@ body:
         - testy
         - lint
         - typecheck
+        - build
         - ręczna weryfikacja
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Materiały pomocnicze
+      description: Powiązane Issue, PR, dokumentacja lub inne materiały.
+      placeholder: |
+        - #123
+        - link do dokumentacji
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Gotowość
+      options:
+        - label: Zadanie zawiera wystarczający kontekst do samodzielnej realizacji.
+          required: true
+        - label: Kryteria akceptacji są jednoznaczne i możliwe do zweryfikowania.
+          required: true
